@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Fester';
+    src: url('Fester-Semi-condensedBold.eot');
+    src: url('Fester-Semi-condensedBold.eot?#iefix') format('embedded-opentype'),
+        url('Fester-Semi-condensedBold.woff2') format('woff2'),
+        url('Fester-Semi-condensedBold.woff') format('woff'),
+        url('Fester-Semi-condensedBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Untitled.eot');
+    src: url('Untitled.eot?#iefix') format('embedded-opentype'),
+        url('Untitled.woff2') format('woff2'),
+        url('Untitled.woff') format('woff'),
+        url('Untitled.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Untitled_1.eot');
+    src: url('Untitled_1.eot?#iefix') format('embedded-opentype'),
+        url('Untitled_1.woff2') format('woff2'),
+        url('Untitled_1.woff') format('woff'),
+        url('Untitled_1.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Fester-Semi-condensedBook.eot');
+    src: url('Fester-Semi-condensedBook.eot?#iefix') format('embedded-opentype'),
+        url('Fester-Semi-condensedBook.woff2') format('woff2'),
+        url('Fester-Semi-condensedBook.woff') format('woff'),
+        url('Fester-Semi-condensedBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Untitled_2.eot');
+    src: url('Untitled_2.eot?#iefix') format('embedded-opentype'),
+        url('Untitled_2.woff2') format('woff2'),
+        url('Untitled_2.woff') format('woff'),
+        url('Untitled_2.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Untitled_3.eot');
+    src: url('Untitled_3.eot?#iefix') format('embedded-opentype'),
+        url('Untitled_3.woff2') format('woff2'),
+        url('Untitled_3.woff') format('woff'),
+        url('Untitled_3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Fester-Semi-condensedHeavy.eot');
+    src: url('Fester-Semi-condensedHeavy.eot?#iefix') format('embedded-opentype'),
+        url('Fester-Semi-condensedHeavy.woff2') format('woff2'),
+        url('Fester-Semi-condensedHeavy.woff') format('woff'),
+        url('Fester-Semi-condensedHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fester';
+    src: url('Fester-Semi-condensedMedium.eot');
+    src: url('Fester-Semi-condensedMedium.eot?#iefix') format('embedded-opentype'),
+        url('Fester-Semi-condensedMedium.woff2') format('woff2'),
+        url('Fester-Semi-condensedMedium.woff') format('woff'),
+        url('Fester-Semi-condensedMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

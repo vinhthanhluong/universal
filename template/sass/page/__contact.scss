@@ -1,0 +1,173 @@
+.contact {
+    width: 100%;
+    //height: 700px;
+    background-color: rgba($color: $bg-ct-cl, $alpha: 0.5);
+    position: relative;
+    padding: 149px 0;
+
+    @include max-media($bk-d-1200){
+        padding: 80px 0;
+    }
+
+    @include max-media($bk-d-992){
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-768){
+        padding: 30px 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url('../img/bg-contact.png');
+        background-repeat: no-repeat;
+        background-position: left -140px bottom;
+        background-size: cover;
+        width: 580px;
+        height: 400px;
+
+        @include max-media($bk-d-768){
+            display: none;
+        }
+    }
+
+    .columns{
+        align-items: center;
+    }
+
+    .column {
+        width: calc(100% / 2);
+
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+        &.fade-left{
+            @include min-media($bk-768){
+                animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+        }
+        &.fade-right{
+            @include min-media($bk-768){
+                animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+        }
+    }
+
+    
+
+    .contact-tt {
+        text-transform: uppercase;
+    }
+
+    .contact-text {
+        @include line-clamp(2);
+        font-size: 15px;
+        margin-top: 25px;
+        @include max-media($bk-992){
+            margin-top: 15px;
+        }
+        @include max-media($bk-576){
+            margin-top: 5px;
+        }
+    }
+
+    .contact-form {
+        padding-top: 40px;
+        @include max-media($bk-992){
+            padding-top: 25px;
+        }
+        .contact-f {
+            max-width: 335px;
+            @include max-media($bk-d-768){
+                max-width: none;
+            }
+            &:not(:first-child){
+                margin-top: 25px;
+            }
+            .f-control {
+                height: 40px;
+                padding: 9px 20px;
+                border-radius: 9px;
+                border-color: transparent;
+                box-shadow: 0px 6px 10px rgba($color: $bg-b-cl, $alpha: 0.16);
+                transition: all .3s ease;
+                
+                &:hover{
+                    border-color: $b-cl;
+                }
+                &::placeholder{
+                    font-style: italic;
+                }
+                
+            }
+
+            .f-submit{
+                width: 100%;
+                height: 40px;
+                outline: none;
+                border: 1px solid $g-7070-cl;
+                border-radius: 9px;
+                background-color: $b-3636-cl;
+                color: $t-w-cl;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 17px;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover , &:focus{
+                    background-color: $bg-b-cl;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    .contact-info {
+        background-color: $bg-b-cl;
+        color: $t-w-cl;
+        padding: 45px;
+        font-size: 16px;
+        @include max-media($bk-992){
+            padding: 30px;
+        }
+        @include max-media($bk-768){
+            padding: 20px;
+        }
+        .contact-item{
+            padding-top: 38px;
+            display: flex;
+            align-items: center;
+            @include max-media($bk-992){
+                padding-top: 25px;
+            }
+            @include max-media($bk-768){
+                padding-top: 20px;
+            }
+            .contact-icon{
+                object-fit: contain;
+                padding-right: 10px;
+
+                &.icon-lt{
+                    margin-bottom: auto;
+                    margin-top: 5px;
+                }
+            }
+
+            a{
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $main-cl;
+                }
+            }
+
+            .contact-location{
+                line-height: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,442 @@
+.about-me {
+    background-color: $g-F2F0-cl;
+
+    .me-title {
+        color: $main-cl;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include max-media($bk-576) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .me-label {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include max-media($bk-576) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .me-box {
+        display: flex;
+
+        .dots-dp {
+            margin-right: 36px;
+            width: 64px;
+            height: 64px;
+
+            @include max-media($bk-576) {
+                margin-right: 20px;
+            }
+        }
+
+        .me-text {
+            width: calc(100% - 80px);
+            font-size: 15px;
+            @include lh(24, 15);
+            @include line-clamp(6);
+        }
+    }
+}
+
+.info-me {
+    position: relative;
+    width: 100%;
+
+    @include max-media($bk-d-768) {
+        background-color: $g-F2F0-cl;
+        background-color: rgba($color: $main-cl, $alpha: 0.6);
+    }
+
+    &::before {
+        content: "";
+        width: 60%;
+        height: 100%;
+        background-color: rgba($color: $main-cl, $alpha: 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include max-media($bk-d-768) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 40%;
+        height: 100%;
+        background-color: rgba($color: $violet-cl, $alpha: 0.8);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include max-media($bk-d-768) {
+            display: none;
+        }
+    }
+
+    .column {
+        &.in-me-l {
+            width: calc(100% / 12 * 6.5);
+
+            @include max-media($bk-d-768) {
+                width: 100%;
+            }
+
+            @include min-media($bk-768) {
+                animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+        }
+
+        &.in-me-r {
+            width: calc(100% / 12 * 5.5);
+
+            @include max-media($bk-d-768) {
+                width: 100%;
+            }
+
+            @include min-media($bk-768) {
+                animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+        }
+    }
+
+    .columns {
+        align-items: center;
+
+        @include max-media($bk-d-768) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .info-me-wrapper {
+        z-index: 1;
+        position: relative;
+    }
+
+    .info-me-inner {
+        .info-img {
+            box-shadow: 10px 15px 15px rgba($color: $bg-b-cl, $alpha: 0.16);
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        .info-me-name {
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            white-space: nowrap;
+            font-family: 'SF Pro Display';
+            @include max-media($bk-d-1200) {
+                white-space: normal;
+            }
+            @include max-media($bk-d-768){
+                margin-bottom: 10px;
+            }
+        }
+
+        .info-me-job {
+            color: rgba($color: $t-w-cl, $alpha: 0.63);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 25px;
+
+            @include max-media($bk-d-1200) {
+                margin-bottom: 15px;
+            }
+
+            @include max-media($bk-d-768) {
+                color: $t-b-cl;
+                margin-bottom: 10px;
+            }
+        }
+
+
+        .info-me-box {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            // margin: -15px;
+            @include max-media($bk-d-1024) {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                // @include max-media($bk-d-992) {
+                //     margin-bottom: 10px;
+                // }
+            }
+
+            @include max-media($bk-375) {
+                justify-content: space-between;
+            }
+        }
+
+        .info-me-b {
+            width: 50%;
+
+
+            &.info-l {
+                @include max-media($bk-1024) {
+                    width: 70%;
+                }
+                @include max-media($bk-400) {
+                    width: 100%;
+                }
+                @include max-media($bk-d-768){
+                    margin-bottom: 10px;
+                }
+            }
+
+            &.info-r {
+                @include max-media($bk-1024) {
+                    width: 30%;
+                }
+                @include max-media($bk-400) {
+                    width: 100%;
+                }
+            }
+
+            .info-me-text {
+                font-size: 15px;
+            }
+
+            .info-b {
+                &:first-child {
+                    margin-bottom: 20px;
+                    @include max-media($bk-d-768){
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        .btn-info-me {
+            width: auto;
+            background-color: $main-cl;
+            font-size: 17px;
+            padding: 20px 35px;
+            @include max-media($bk-500){
+                width: 100%;
+                padding: 20px 10px;
+            }
+
+            &:hover {
+                background-color: $bg-b-cl;
+                color: $main-cl;
+            }
+        }
+    }
+}
+
+.teacher-quality {
+    background-color: $g-F2F0-cl;
+    overflow-x: hidden;
+
+    .teacher-intro {
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 90px;
+
+        @include max-media($bk-1024) {
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+
+        @include max-media($bk-576) {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $main-cl;
+        }
+    }
+
+    .teacher-l {
+        @include lh(24, 15);
+    }
+
+    .teacher-title {
+        border-bottom: 1px solid $main-cl;
+        padding-bottom: 10px;
+        @include lh(53, 40);
+        margin-bottom: 50px;
+
+        @include max-media($bk-1024) {
+            margin-bottom: 30px;
+        }
+
+        @include max-media($bk-576) {
+            padding-bottom: 5px;
+            // margin-bottom: 30px;
+        }
+    }
+
+    .teacher-inner {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: $main-cl;
+
+            @include max-media($bk-576) {
+                display: none;
+            }
+        }
+
+        .columns {
+            justify-content: space-between;
+            position: relative;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+
+                @include max-media($bk-d-992) {
+                    margin-top: 20px;
+                }
+            }
+
+            .box {
+                width: 64px;
+                height: 64px;
+                background-color: $g-F2F0-cl;
+                border: 2px solid $main-cl;
+                border-radius: 100%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+
+                &.box-bottom{
+                    bottom: 0;
+                    top: auto;
+                }
+
+                @include max-media($bk-576) {
+                    display: none;
+                }
+
+                &::after {
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background-color: $main-cl;
+                    border-radius: 100%;
+                    @include pos-mid;
+                }
+            }
+
+            &.reverse {
+                flex-direction: row-reverse;
+
+                .teacher-img {
+                    // margin-right: auto;
+                    margin-left: 0;
+                }
+
+                .teacher-t {
+                    .teacher-box {
+                        text-align: right;
+
+                        @include max-media($bk-576) {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+        .column {
+            width: calc(100% / 12 * 5);
+
+            @include max-media($bk-576) {
+                width: 100%;
+            }
+
+            // &.teacher-i{
+            //     @include min-media($bk-768){
+            //         animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            //     }
+            // }
+
+            // &.teacher-t{
+            //     @include min-media($bk-768){
+            //         animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            //     }
+            // }
+        }
+
+        .teacher-img {
+            margin-left: auto;
+            max-width: max-content;
+            position: relative;
+            border-radius: 100%;
+
+            @include max-media($bk-576) {
+                margin: 0 auto !important;
+                max-width: 180px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                z-index: 2;
+                position: relative;
+                border-radius: 100%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 20px;
+                left: -30px;
+                background-image: url("/template/img/bg-after.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                width: 100px;
+                height: 130px;
+            }
+
+
+        }
+
+        .teacher-tt {
+            margin-bottom: 30px;
+
+            @include max-media($bk-d-992) {
+                margin-bottom: 20px;
+            }
+
+            @include max-media($bk-576) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .teacher-desc {
+            font-size: 15px;
+            @include lh(24, 15);
+        }
+    }
+}

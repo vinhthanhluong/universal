@@ -1,0 +1,430 @@
+.student-typical {
+    background-color: $g-F2F0-cl;
+
+    .swiper-container{
+        padding-top: 60px;
+
+        @include max-media($bk-d-992) {
+            padding-top: 40px;
+        }
+
+        @include max-media($bk-d-768) {
+            padding: 20px 0 30px;
+        }
+    }
+
+    .swiper-pagination{
+        display: none;
+        @include max-media($bk-576){
+            display: block;
+            bottom: 0;
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: $main-cl;
+        }
+    }
+
+    .student-intro {
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 90px;
+
+        @include max-media($bk-1024) {
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+
+        @include max-media($bk-576) {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $main-cl;
+        }
+    }
+
+    .student-title {
+        border-bottom: 1px solid $main-cl;
+        padding-bottom: 10px;
+        @include lh(53, 40);
+        margin-bottom: 50px;
+
+        @include max-media($bk-1024) {
+            margin-bottom: 30px;
+        }
+
+        @include max-media($bk-576) {
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .student-tt {
+        color: $main-cl;
+    }
+
+    .student-box {
+        // margin-top: 60px;
+
+        // @include max-media($bk-d-992) {
+        //     margin-top: 40px;
+        // }
+
+        // @include max-media($bk-d-768) {
+        //     margin-top: 20px;
+        // }
+
+        .columns {
+            justify-content: space-between;
+
+            @include max-media($bk-576) {
+                flex-direction: column;
+            }
+        }
+
+        .column {
+            &.st-l {
+                width: calc(100% / 12 * 5);
+
+                @include max-media($bk-576) {
+                    width: 100%;
+                }
+            }
+
+            &.st-r {
+                width: calc(100% / 12 * 6);
+
+                @include max-media($bk-1024) {
+                    width: calc(100% / 12 * 7);
+                }
+
+                @include max-media($bk-576) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .student-b {
+        width: 100%;
+        height: 100%;
+        // @include max-media($bk-576){
+        //     height: auto;
+        // }
+
+        .student-ig {
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                transition: all .3s ease;
+                @include max-media($bk-576){
+                    max-height: 200px;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+
+                &::before {
+                    @include visible;
+                }
+
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $bg-b-cl, $alpha: 0.6);
+                z-index: 1;
+                transition: all .3s ease;
+                @include hidden;
+            }
+        }
+
+        .student-name {
+            text-transform: capitalize;
+            margin-bottom: 25px;
+
+            @include max-media($bk-1024) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .student-job {
+            color: rgba($color: $t-b-cl, $alpha: 0.63);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 30px;
+
+            @include max-media($bk-1024) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .student-content {
+            display: flex;
+            justify-content: space-between;
+            .dots-dp {
+                margin-right: 20px;
+                @media screen and (min-width: 768px) and(max-width: 991px) {
+                    width: 45px;
+                    margin-right: 5px;
+                }
+            }
+
+            .student-text {
+                font-size: 15px;
+                @include line-clamp(9);
+                width: calc(100% - 68px);
+
+                @include max-media($bk-d-992) {
+                    @include line-clamp(7);
+                }
+                @media screen and (min-width: 768px) and(max-width: 991px) {
+                    width: calc(100% - 70px);
+                }
+            }
+        }
+
+    }
+}
+
+.course {
+    .course-title {
+        color: $main-cl;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        @include max-media($bk-d-992){
+            margin-bottom: 30px;
+        }
+        @include max-media($bk-d-768){
+            margin-bottom: 20px;
+        }
+    }
+
+    .columns {
+        justify-content: space-between;
+    }
+
+    .column {
+        width: calc(100% / 12 *5.5);
+        @include max-media($bk-d-1200){
+            width: calc(100% / 12 * 6);
+        }
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+    }
+
+
+    .course-desc {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: space-between;
+        @include max-media($bk-d-992){
+            margin-bottom: 30px;
+        }
+        @include max-media($bk-d-768){
+            margin-bottom: 20px;
+        }
+        .course-text {
+            width: calc(100% - 73px);
+            @include line-clamp(7);
+            @include max-media($bk-d-768){
+                @include line-clamp(5);
+            }
+            // @include max-media($bk-768){
+            //     width: 100%;
+            // }
+            @media screen and (min-width: 768px) and(max-width: 991px) {
+                width: calc(100% - 70px);
+            }
+
+            &.w-auto{
+                width: auto;
+            }
+        }
+
+        .dots-dp {
+            margin-right: 5px;
+            @media screen and (min-width: 768px) and(max-width: 991px) {
+                width: 45px;
+            }
+        }
+
+    
+    }
+
+    .course-label {
+        @include fz-18;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .course-info {
+        .course-b {
+            &:not(:first-child) {
+                padding-top: 20px;
+            }
+
+            .course-bi {
+                width: 100%;
+                height: 22px;
+                background-color: $g-DBDB-cl;
+
+                position: relative;
+
+                &::before {
+                    content: '';
+                    background-color: $main-cl;
+
+                    position: absolute;
+                    top: 4px;
+                    bottom: 4px;
+                    left: 0;
+                    animation: maxwidth 1s;
+                }
+
+                &.skill-1 {
+                    &::before {
+                        max-width: 90%;
+                        width: 100%;
+                    }
+                }
+
+                &.skill-2 {
+                    &::before {
+                        max-width: 95%;
+                        width: 100%;
+                    }
+                }
+
+                &.skill-3 {
+                    &::before {
+                        max-width: 80%;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .c-r {
+        @include max-media($bk-d-768){
+            margin-top: 20px;
+        }
+        .course-w {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px -10px -15px;
+
+            @include max-media($bk-d-992){
+                padding: -5px -5px -10px;
+            }
+        }
+
+        .course-b {
+            width: calc(100% / 2);
+            padding: 10px 10px 15px;
+        
+            @include max-media($bk-d-992){
+                padding: 5px 5px 10px;
+            }
+
+            &:nth-of-type(even) {
+                >.course-b-s {
+                    // background-color: red;
+                    transform: translateY(30px);
+                    @include max-media($bk-d-768){
+                        transform: translateY(0);
+                    }
+                }
+            }
+            &:nth-of-type(odd) {
+                >.course-b-s {
+                    // background-color: red;
+                    transform: translateY(-20px);
+                    @include max-media($bk-d-768){
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+    .course-b-s {
+        background-color: rgba($color:  $main-cl, $alpha: 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 35px 10px;
+        height: 100%;
+        // box-shadow: 10px 10px 10px rgba($color: $bg-b-cl, $alpha: 0.16);
+        @include max-media($bk-d-768){
+            box-shadow: none;
+        }
+
+        .course-i {
+            margin: 0 auto 30px;
+        }
+
+        .course-p {
+            @include fz-18;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            @include max-media($bk-d-768){
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    &.exper-teacher{
+
+        .course-title{
+            margin-bottom: 30px;
+            @include max-media($bk-d-1200){
+                margin-bottom: 20px;
+            }
+            @include max-media($bk-d-768){
+                margin-bottom: 10px;
+            }
+        }
+
+        .course-desc{
+            flex-direction: column;
+
+            .course-text{
+                border-left: 1px solid $main-cl;
+                padding-left: 20px;
+            }
+        }
+    }
+
+}

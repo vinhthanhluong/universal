@@ -1,0 +1,227 @@
+.course-s {
+    position: relative;
+    background-color: $g-F2F0-cl;
+    .columns {
+        &:last-child {
+           margin-top: 50px;
+           @include max-media($bk-d-768){
+               margin-top: 0;
+           }
+        }
+        justify-content:  space-between;
+        
+    }
+
+    .column {
+        width: calc(100% / 12 * 6);
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+    }
+
+    .course-s-wrapper{
+        position: relative;
+    }
+
+    .course-s-title {
+        margin-bottom: 45px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-768){
+            margin-bottom: 10px;
+        }
+    }
+
+    .course-s-box {
+        width: calc(100% / 12 * 10);
+        @include max-media($bk-d-992){
+            width: 100%;
+            padding: 5px 0;
+        }
+        .course-s-label {
+            color: $main-cl;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: bold;
+            @include max-media($bk-d-1200){
+                margin-bottom: 20px;
+            }
+
+            @include max-media($bk-d-768){
+                margin-bottom: 10px;
+            }
+        }
+
+        .course-s-desc {
+            font-size: 15px;
+            @include lh(24, 15);
+        }
+    }
+
+    .course-s-img{
+        position: absolute;
+        top: -170px;
+        right: -100px;
+        z-index: 1;
+        max-width: 480px;
+        @include max-media($bk-1500){
+            right: 30px;
+            top: -150px;
+            max-width: 410px;
+        }
+        @include max-media($bk-d-992){
+            right: 30px;
+            top: 100px;
+            max-width: 350px;
+        }
+        @include max-media($bk-d-768){
+            display: none;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.document{
+
+    .document-title{
+        margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 10px;
+        }
+
+        @include max-media($bk-d-768){
+            margin-bottom: 0px;
+        }
+    }
+
+    .document-box{
+        .document-img{
+            box-shadow: 0 8px 9px rgba($color: $b-cl, $alpha: 0.16);
+            img{
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .document-content{
+            padding: 30px 10px 0;
+            @include max-media($bk-d-1200){
+                padding: 20px 10px 10px;
+            }
+            @include max-media($bk-d-768){
+               padding: 10px 0 ;
+            }
+        }
+
+        .document-tt{
+            margin-bottom: 15px;
+            @include line-clamp(3);
+            @include max-media($bk-d-1200){
+                margin-bottom: 10px;
+            }
+            @include max-media($bk-d-768){
+                margin-bottom: 5px;
+            }
+        }
+
+        .document-desc{
+            font-size: 15px;
+            @include lh(24,15);
+            @include line-clamp(4);
+
+            span{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .swiper-pagination{
+        display: none;
+        @include max-media($bk-d-768){
+            display: block;
+        }
+    }
+}
+
+.download{
+    background-color: $main-cl;
+
+    .download-title{
+        margin-bottom: 15px;
+        @include max-media($bk-d-768){
+            margin-bottom: 20px;
+        }
+    }
+
+    .download-box{
+        display: flex;
+        align-items: center;
+        margin: -7.5px;
+        @include max-media($bk-d-992){
+            flex-wrap: wrap;
+        }
+
+        .download-f{
+            width: 100%;
+            max-width: 270px;
+            padding: 7.5px;
+            @include max-media($bk-d-992){
+                max-width: none;
+                
+            }
+        }
+
+        .f-control{
+            padding: 20px 25px;
+            font-size: 15px;
+            border-color: transparent;
+            height: auto;
+
+            @include max-media($bk-d-992){
+                padding: 11px 15px;
+            }
+            
+            &::placeholder{
+                font-style: italic;
+                color: rgba($color: $t-b-cl, $alpha: 0.29);
+            }
+
+            &:hover , &:focus{
+                border-color: rgba($color: $b-cl, $alpha: 0.8);
+            }
+        }
+
+        .f-submit{
+            background-color: $r-cl;
+            max-width: 270px;
+            padding: 21px 0;
+            font-size: 15px;
+            color: $w-cl;
+            line-height: 21px;
+            cursor: pointer;
+            @include max-media($bk-d-992){
+                padding: 11px 15px;
+            }
+            
+            @include max-media($bk-576){
+                max-width: none;
+            }
+
+            &:hover{
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,84 @@
+//primary color
+$b-cl: #000000;
+$w-cl: #fff;
+$g-cl: #898989;
+
+//color design
+$main-cl: #FEBF2C;
+$border-cl: #e1e1e1;
+$violet-cl: #40427E;
+$bg-ft-cl:#101010;
+$bg-ct-cl:#F2F0F0;
+$g-BCBC-cl:#bcbcbc;
+$g-7070-cl:#707070;
+$g-F4F3-cl:#F4F3F3;
+$g-F8F8-cl:#F8F8F8;
+$g-D8D8-cl:#D8D8D8;
+$g-E0E0-cl:#E0E0E0;
+$g-9D9D-cl:#9D9D9D;
+$g-DBDB-cl:#DBDBDB;
+$g-F2F0-cl:#F2F0F0;
+$g-938D-cl:#938D8D;
+$g-DEE4-cl:#DEE4E8;
+$b-3636-cl:#363636;
+$b-3838-cl:#383838;
+$gre-d-cl:#869791;
+$v-cl:#465679;
+$r-cl:#FF0A13;
+$bg-say:#1F2E3B;
+$y-cl:#FEB72B;
+$y1-cl:#F2AB28;
+$r-1-cl:#E73F45;
+//color-text
+$t-b-cl: $b-cl;
+$t-w-cl: $w-cl;
+$t-g-cl: $g-cl;
+$t-m-cl: $main-cl;
+
+//color-background
+$bg-b-cl: $b-cl;
+$bg-w-cl: $w-cl;
+$bg-g-cl: $g-cl;
+$bg-m-cl: $main-cl;
+
+
+
+
+
+//font-famili , font-size
+$fz-base: 10px;
+$font-body: 'SVN-Poppins', sans-serif;
+$fz-body: 14px;
+$lh-body: 1.4;
+$cl-body: #000000;
+
+
+//break point
+$bk-1900: 1900px;
+$bk-1500: 1500px;
+$bk-1200: 1200px;
+$bk-1024: 1024px;
+$bk-992: 992px;
+$bk-800: 800px;
+$bk-600: 600px;
+$bk-768: 768px;
+$bk-576: 576px;
+$bk-500: 500px;
+$bk-425: 425px;
+$bk-400: 400px;
+$bk-375: 375px;
+
+//break point - 1
+$bk-d-1200: $bk-1200 - 1;
+$bk-d-1024: $bk-1024 - 1;
+$bk-d-992: $bk-992 - 1;
+$bk-d-768: $bk-768 - 1;
+$bk-d-576: $bk-576 - 1;
+
+/*width*/
+$w-scroll: 0px;
+$max-width: 100%;
+$container-full-width: 1920px;
+$container-width: 1200px;
+$padding: 15px;
+

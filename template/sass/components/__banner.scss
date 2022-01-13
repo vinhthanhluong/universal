@@ -1,0 +1,508 @@
+.banner {
+    .swiper-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+    }
+
+    .swiper-slide {
+        padding: 0;
+        height: 100%;
+    }
+
+    .swiper-slide>img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: 0;
+    }
+
+    //////
+    &-page {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        padding: 180px 0;
+
+        @include max-media($bk-1200) {
+            padding: 120px 0;
+        }
+
+        @include max-media($bk-992) {
+            padding: 90px 0;
+        }
+
+        @include max-media($bk-576) {
+            padding: 60px 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $bg-b-cl, $alpha: 0.3);
+        }
+
+        .banner-p {
+            margin-top: 12px;
+            text-transform: none;
+
+            &.pd {
+                padding: 0 30px;
+            }
+        }
+
+        .banner-tt {
+            letter-spacing: 1px;
+			@include min-media($bk-768) {
+				animation: tracking-in-contract-bck-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+			}
+        }
+
+        .f-control {
+
+            &:hover,
+            &:focus {
+                border-color: $b-cl;
+                box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: 0.16);
+            }
+        }
+    }
+
+    .banner-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        color: $t-w-cl;
+        z-index: 1;
+        position: relative;
+        // text-transform: uppercase;
+        &.t-left{
+            text-align: left;
+        }
+
+        .banner-border {
+            position: relative;
+            padding: 10px;
+			@include min-media($bk-768) {
+				animation: tracking-in-contract-bck-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+			}
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 50px;
+                border-top: 1px solid $main-cl;
+                border-left: 1px solid $main-cl;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 50px;
+                right: 0;
+                bottom: 0;
+                border-right: 1px solid $main-cl;
+                border-bottom: 1px solid $main-cl;
+            }
+        }
+
+        .search-desktop {
+            width: 60%;
+            margin-top: 30px;
+
+            @include max-media($bk-768) {
+                width: 90%;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    &-home {
+        width: 100%;
+        height: auto;
+
+        .banner-wrapper {
+            width: 100%;
+            background-color: transparent;
+            padding: 76px 0;
+
+            @include max-media($bk-d-1200) {
+                padding: 50px 0;
+            }
+
+            @include max-media($bk-1024) {
+                padding: 40px 0;
+            }
+        }
+
+        .banner-wrap {
+            border-bottom: 1px solid rgba($color: $w-cl, $alpha: 0.2);
+            padding-bottom: 90px;
+
+            @include max-media($bk-d-1200) {
+                padding-bottom: 50px;
+            }
+
+            @include max-media($bk-d-768) {
+                padding-bottom: 30px;
+            }
+        }
+
+        .banner-box {
+            background-color: $bg-w-cl;
+            max-width: 570px;
+            padding: 40px 70px;
+            margin: 0 auto;
+
+            @include max-media($bk-1024) {
+                padding: 30px 60px;
+            }
+
+            @include max-media($bk-992) {
+                padding: 30px 50px;
+            }
+
+            @include max-media($bk-576) {
+                padding: 25px;
+                margin: 10px;
+            }
+
+            .banner-tt {
+                color: $violet-cl;
+                font-weight: 600;
+                margin-bottom: 25px;
+                line-height: 1.4;
+
+                @include max-media($bk-1024) {
+                    margin-bottom: 15px;
+                }
+
+                span {
+                    color: $main-cl;
+                }
+            }
+
+            .banner-intro {
+                line-height: 1.5;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 25px;
+                color: $t-b-cl;
+
+                @include max-media($bk-1024) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .btn {
+                border-radius: 4px;
+                font-weight: normal;
+                padding: 13px 0;
+            }
+
+            .btn-study {
+                background-color: $g-F4F3-cl;
+                color: rgba($color: $b-cl, $alpha: 0.3);
+                margin-bottom: 10px;
+                text-transform: none;
+
+                &:hover {
+                    color: $t-b-cl;
+                    box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: 0.16);
+                }
+            }
+
+            .btn-visory {
+                background-color: $main-cl;
+                color: $violet-cl;
+
+                &:hover {
+                    background-color: $b-cl;
+                    color: $main-cl;
+                    box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: 0.16);
+                }
+            }
+
+        }
+
+        .banner-w {
+            padding-top: 60px;
+
+            @include max-media($bk-d-1200) {
+                padding-top: 30px;
+            }
+
+            @include max-media($bk-d-768) {
+                padding-top: 20px;
+            }
+
+            .column {
+                width: calc(100% / 4);
+
+                @include max-media($bk-992) {
+                    width: calc(100% / 2);
+                }
+
+                @include max-media($bk-576) {
+                    width: calc(100% / 1);
+                }
+            }
+
+
+
+            .banner-b {
+                display: flex;
+
+                //justify-content: space-between;
+                .counter {
+                    color: $main-cl;
+                    width: 95px;
+                    font-family: 'Fester';
+                    font-weight: 500;
+
+                    @include max-media($bk-992) {
+                        width: 85px;
+                    }
+
+                    &::after {
+                        content: "%";
+                        font-size: 30px;
+                        vertical-align: text-top;
+                    }
+
+                }
+
+                .banner-t {
+                    width: calc(100% - 95px);
+                    font-weight: 700;
+                    color: $t-w-cl;
+                    padding-left: 10px;
+                    padding-top: 7px;
+                    text-transform: uppercase;
+                   
+                    @include max-media($bk-1024) {
+                        padding-left: 0;
+                    }
+
+                    @include max-media($bk-d-992){
+                        width: calc(100% - 85px);
+                    }
+
+                }
+            }
+        }
+
+        .banner-img {
+            position: relative;
+            height: 100%;
+
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(transparent, $bg-b-cl);
+            }
+        }
+    }
+}
+
+
+.banner-book {
+
+    .columns {
+        justify-content: space-between;
+    }
+
+    .column {
+
+        &.banner-t {
+            width: calc(100% / 12 * 6);
+
+            @include max-media($bk-d-768) {
+                width: 100%;
+            }
+        }
+
+        &.banner-i {
+            width: calc(100% / 12 * 5);
+
+            .banner-inner {
+                width: 700px;
+                margin-top: 50px;
+
+                @include max-media($bk-1900) {
+                    width: 100%;
+                    margin-left: 20px;
+                }
+
+                @include max-media($bk-d-992) {
+                    margin-left: 0;
+                }
+            }
+
+            @include max-media($bk-1900) {
+                width: calc(100% / 12 * 6);
+            }
+
+            @include max-media($bk-d-768) {
+                display: none;
+            }
+        }
+    }
+
+    .banner-img {
+        width: 100%;
+      
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+          
+        }
+    }
+
+    .banner-tt {
+        margin-bottom: 10px;
+      
+
+
+    }
+
+    .banner-p {
+        color: $t-w-cl;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 50px;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .banner-f {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -25px;
+
+        @include max-media($bk-d-1200) {
+            margin: -15px;
+        }
+
+        @include max-media($bk-1024) {
+            margin: -10px;
+        }
+
+        .banner-b {
+            padding: 25px;
+            width: 100%;
+
+            @include max-media($bk-d-1200) {
+                padding: 15px;
+            }
+
+            @include max-media($bk-1024) {
+                padding: 10px;
+            }
+
+            &.w-50 {
+                width: 50%;
+
+                @include max-media($bk-d-992) {
+                    width: 100%;
+                }
+            }
+
+            .f-control {
+                border-radius: 21px;
+                background-color: rgba($color: $bg-w-cl, $alpha: 0.7);
+                padding: 20px 23px;
+                border-color: transparent;
+                height: auto;
+                font-size: 15px;
+                font-style: italic;
+
+                @include max-media($bk-d-992) {
+                    padding: 11px 15px;
+                }
+
+                &:hover,
+                &:focus {
+                    border-color: rgba($color: $bg-b-cl, $alpha: 0.8);
+                }
+
+                &::placeholder {
+                    color: rgba($color: $t-b-cl, $alpha: 0.29);
+                }
+            }
+
+            .f-submit {
+                background-color: rgba($color: $bg-w-cl, $alpha: 0.7);
+                border-radius: 21px;
+                max-width: 180px;
+                margin-left: auto;
+                cursor: pointer;
+                font-size: 15px;
+                padding: 20px 0;
+
+                @include max-media($bk-d-992) {
+                    padding: 11px 15px;
+                }
+
+                &:hover {
+                    letter-spacing: 2px;
+                    color: $violet-cl;
+                }
+            }
+        }
+    }
+
+
+}
